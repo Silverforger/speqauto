@@ -14,24 +14,17 @@ function contactCreate() {
 
     const ulCreate = document.createElement('ul');
     ulCreate.classList.add('icons-list');
-    for (let i = 0; i<2; i++) {
-        const liCreate = document.createElement('li');
-        const iCreate = document.createElement('i');
-        switch (i) {
-            case 0:
-                iCreate.classList.add('fab')
-                iCreate.classList.add('fa-facebook')
-                liCreate.appendChild(iCreate);
-                break;
-            case 1:
-                iCreate.classList.add('fab');
-                iCreate.classList.add('fa-instagram');
-                liCreate.appendChild(iCreate);
-                break;
-            default:
-        }
-        ulCreate.appendChild(liCreate);
-    }
+    const aCreate = document.createElement('a');
+    aCreate.href = "https://www.facebook.com/speq.auto/"
+    aCreate.target = "_blank"
+    const liCreate = document.createElement('li');
+    const iCreate = document.createElement('i');
+    iCreate.classList.add('fab')
+    iCreate.classList.add('fa-facebook')
+    aCreate.appendChild(iCreate)
+    liCreate.appendChild(aCreate);
+    ulCreate.appendChild(liCreate);
+
 
     const divCreate = document.createElement('div');
     divCreate.classList.add('call-div')
